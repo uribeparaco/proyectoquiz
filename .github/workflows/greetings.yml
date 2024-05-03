@@ -1,0 +1,31 @@
+name: Greetings
+
+on:
+  pull_request_target:
+    types: [opened]
+  issues:
+    types: [opened]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - name: Check if user is new contributor
+        id: check_contributor
+        uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Greet new contributor in issue
+        if: ${{ steps.check_contributor.outputs.is_first_interaction && github.event_name == 'issues' }}
+        run: |
+          echo "Hello! Thank you for opening your first issue. We appreciate your contribution to the project. Someone from our team will review it shortly. Have a great day!"
+
+      - name: Greet new contributor in pull request
+        if: ${{ steps.check_contributor.outputs.is_first_interaction && github.event_name == 'pull_request_target' }}
+        run: |
+          echo "Hello! Thank you for opening your first pull request. We appreciate your effort in improving the project. Someone from our team will review it shortly. Have a great day!"
+
