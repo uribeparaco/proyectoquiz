@@ -10,7 +10,7 @@ import com.google.firebase.database.FirebaseDatabase
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     lateinit var modeloQuizlist : MutableList<Modeloquiz>
-    lateinit var adaptor: QuizListAdapter
+    lateinit var adapter: QuizListAdapter
 
 
 
