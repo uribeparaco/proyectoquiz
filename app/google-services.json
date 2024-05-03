@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "736273266213",
+    "project_id": "proyectoquiz-29021",
+    "storage_bucket": "proyectoquiz-29021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:736273266213:android:ded694d32371c10847f1cc",
+        "android_client_info": {
+          "package_name": "com.example.proyectoquiz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARv8JR_UTRpIjQcp-xKRhCf6UHfOIL3bE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
